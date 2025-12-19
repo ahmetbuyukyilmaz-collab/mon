@@ -1,4 +1,3 @@
-
 <!doctype html>
   <html>
   
@@ -7,8 +6,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Morning Bundle</title>
     <style>
+      * {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
       body {
-        font-family: "Helvetica", "Times New Roman", sans-serif;
+        font-family: "Inter", "Times New Roman", sans-serif;
         margin: 0;
         margin: 0;
         padding: 0;
@@ -64,7 +66,7 @@
       .main .title {
         margin-top: 10px;
         font-size: 16px;
-        font-family: "Helvetica", sans-serif;
+        font-family: 'Inter', sans-serif;
       }
   
       .container_logo {
@@ -146,23 +148,23 @@
       }
   
       .text-primary {
-        font-family: "Helvetica", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 20px;
         font-weight: bold;
       }
   
       .text-secondary {
-        font-family: "Helvetica", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 17px;
       }
   
       .text-tertiary {
-        font-family: "Helvetica", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 15px;
       }
   
       .text-quaternary {
-        font-family: "Helvetica", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 10px;
       }
   
@@ -224,7 +226,7 @@
       }
 
       .advertorial-cta {
-          background-color: #ec0622;
+          background-color: #FDDF33;
           padding: 12px 0;
       }
   
@@ -275,7 +277,7 @@
       }
   
       .finance_container .title {
-        font-family: "Helvetica", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 10px;
         color: #9c9c9c;
       }
@@ -382,6 +384,43 @@
         overflow: hidden;
         }
 
+        .read-more-btn {
+          -webkit-appearance: none;
+          appearance: none;
+          background: transparent !important;
+          cursor: pointer;
+          display: block;
+          border: none;
+          outline: none;
+          border-radius: 12px;
+          padding: 2px 0px;
+          font-family: "Inter", sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          color: #a7a7a7;
+          line-height: 20px;
+          letter-spacing: -0.1px;
+          margin-top: 12px;
+          height: 24px;
+        }
+
+        .read-more-btn:active,
+        .read-more-btn:focus {
+          background: transparent !important;
+        }
+
+        /* iOS’ta iç padding kenarlığı */
+        .read-more-btn::-moz-focus-inner {
+          border: 0;
+        }
+
+        .clamp-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
        
         @media (max-width: 450px) {
           #masthead {
@@ -435,7 +474,48 @@
         }
       }
     </style>
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <!-- CONSENT: prevent web CMP, force NPA before GA/GPT load -->
+    <script>
+      window.__APP_CONSENT__ = {
+        gdprApplies: true,
+        personalizedAds: false,
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        tcString: "", // leave empty if you don't have a TCF string
+      };
+
+      window.__tcfapi = function (cmd, v, cb) {
+        if (cmd === "getTCData" || cmd === "addEventListener") {
+          cb(
+            {
+              tcString: window.__APP_CONSENT__?.tcString || "",
+              gdprApplies: !!window.__APP_CONSENT__?.gdprApplies,
+              eventStatus: "tcloaded",
+              cmpStatus: "loaded",
+            },
+            true
+          );
+        }
+      };
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        ad_storage: "denied",
+      });
+
+      window.googletag = window.googletag || { cmd: [] };
+      googletag.cmd.push(function () {
+        googletag.pubads().setRequestNonPersonalizedAds(1);
+        // Optional: also limit ads explicitly
+        // googletag.pubads().setPrivacySettings({ limitedAds: true });
+      });
+    </script>
   </head>
   
   <body class="">
@@ -449,18 +529,18 @@
                   <div style="display: block; width: 100%; padding-bottom: 20px;"><img class="logo"
                       src="https://static.bundle.app/email-newsletter/bafkreian4lhvg5oujtfacm4ey56uguo5xaxb5i66kwhf3ieu5yw3i4ffna"
                       height="85" /></div>
-                        <a style="display: flex; flex-direction: row; align-items: center; column-gap: 8px; width: 100%; padding: 5px 0;"
-                                    href=" https://www.instagram.com/reel/DDZkAkCKlS9/?igsh=NDE4bGRsMzFoajB5" target="_blank" ><img class="logo"
-                                        src="https://static.bundle.app/email-newsletter/bafkreicmnihq7suzqocx4gjkce4ld3cvjh7lphwwpb6ntwkmoumjrllqvm" style="max-height:35px; width: auto; max-width: 100px; object-fit:cover;"
+                        <a id="sponsorHeader" style="display: none; flex-direction: row; align-items: center; column-gap: 8px; width: 100%; padding: 5px 0;"
+                                    href="https://youtu.be/7ALszhRdv4s" target="_blank" ><img class="logo"
+                                        src="https://static.bundle.app/email-newsletter/bafkreia7hpsvfti46gcouzhob262sywxzyhqplnn4imnv2nbp724kiznqq" style="max-height:35px; width: auto; max-width: 100px; object-fit:cover;"
                                          />
                                     <div style="background-color: #000; min-width: 1px; min-height: 7px;"></div>
                                     <span
-                                        style="color: #0F0F0F; font-size: 10px; font-family: Helvetica; font-weight: 400; line-height: 11.5px; word-wrap: break-word;">katkılarıyla
+                                        style="color: #0F0F0F; font-size: 10px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 11.5px; word-wrap: break-word;">sponsorluğunda
                                     </span>
                                 </a>
                   <p style="margin: 10px 0 0 0;">
                     <span
-                        style="color: black; font-size: 16px; font-family: Helvetica; font-weight: 400; line-height: 24px;  word-wrap: break-word">Günaydın! Biz de erkenciyiz. Dünyanın dört bir yanından sabaha damga vuran gelişmeler, güne hızlı başlamanızı sağlayacak özetler, ve tabii ki o meşhur soru: “Bugün ne yesem?” Merak etme, 30 gün boyunca ilham verecek nefis tariflerle bu derdi ortadan kaldırıyoruz! Hepsi aşağıda seni bekliyor. Hadi başlayalım! </span></span>
+                        style="color: black; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 24px;  word-wrap: break-word">Günaydın! Yeni bir gün başlıyor, gündem hızlı… Sabah kahveniz eşliğinde dünyada neler olup bittiğini öğrenmeye ne dersiniz? </span>
                   </p>
                 </td>
               </tr>
@@ -475,17 +555,18 @@
        <div class="article-box-item">
                                   <img src="https://static.bundle.app/ad-assets/mailing-20250117/maker1.png"
                                     alt="li_marker" height="12" style="margin-top: 6px" />
-                                  <div>
+                                  <div class="clampable-text">
                                        
                                         <p class="text-primary">
-                                          Düşük gelir beyan eden mesleklere ‘yıllık harç’ düzenlemesi
+                                          Green Card çekilişi olarak bilinen DV1 programı süresiz iptal edildi
                                         </p>
                                          
-                                        <p class="text-secondary" style="line-height: 160%; margin-top: 14px;">
+                                        <p class="text-secondary clamp-3" style="line-height: 160%; margin-top: 14px;">
                                           <span style="width: 100%"><span
-                                              style="color: black; font-size: 17px; font-family: Helvetica; font-weight: 400; line-height: 27.20px;  word-wrap: break-word">Hazine ve Maliye Bakanlığı, düşük gelir beyan ederek vergi ödemekten kaçınan doktor, kuyumcu, emlakçı ve galericiler için yıllık harç uygulaması hazırlıyor. Yaklaşık 179 bin kişiyi kapsayacak düzenlemeyle bu meslekler gelir vergisine ek olarak sabit bir harç ödeyecek.Yeni düzenlemenin, düşük matrah beyan ederek vergi ödemekten kaçınan mesleklerde kayıt dışılığı azaltması hedefleniyor. Bakanlık, denetimlerin sıklaştırılmasıyla birlikte sistemin vergi gelirlerine olumlu katkı sağlamasını bekliyor.
+                                              style="color: black; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 27.20px;  word-wrap: break-word">ABD Diversity Visa (DV) Programı olarak bilinen Green Card çekilişi (DV-1) ile ilgili önemli bir gelişme yaşandı. ABD İç Güvenlik Bakanı Kristi Noem’in talimatıyla, DV-1 programının uygulanmasına geçici olarak dur kararı verildiği bildirildi. Bu karar 19 Aralık 2025 tarihinde açıklandı ve programın askıya alınması resmî olarak duyuruldu.
                                             </span></span>
                                         </p>
+                                         <button class="read-more-btn">Devamını oku</button>
                                       </div>
                                   </div>
                                 </li>
@@ -493,21 +574,22 @@
        <div class="article-box-item">
                                   <img src="https://static.bundle.app/ad-assets/mailing-20250117/maker1.png"
                                     alt="li_marker" height="12" style="margin-top: 6px" />
-                                  <div>
+                                  <div class="clampable-text">
                                        
                                         <p class="text-primary">
-                                          Ayşe Ateş’ten Serdar Öktem suikastına dair açıklama: ‘Konuşacaktı’
+                                          Gazeteci Levent Gültekin gözaltına alındı
                                         </p>
                                          
-                                        <p class="text-secondary" style="line-height: 160%; margin-top: 14px;">
+                                        <p class="text-secondary clamp-3" style="line-height: 160%; margin-top: 14px;">
                                           <span style="width: 100%"><span
-                                              style="color: black; font-size: 17px; font-family: Helvetica; font-weight: 400; line-height: 27.20px;  word-wrap: break-word">Sinan Ateş’in eşi Ayşe Ateş, suikast sonucu öldürülen avukat Serdar Öktem için “Serdar konuşacaktı” diyerek cinayet davasında önemli bir aşamaya gelindiğini söyledi. Ateş, Öktem’in Sinan Ateş cinayetiyle ilgili bilgi vereceği bir davada yargılandığını ve öldürülmesinin “zamanlaması manidar” olduğunu belirtti.
+                                              style="color: black; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 27.20px;  word-wrap: break-word">Avukatı Çağrı Çetin, gazeteci Levent Gültekin'in gözaltına alındığını açıkladı. Çetin, X sosyal medya platformundan yaptığı açıklamada, Gültekin'in "17 Aralık tarihli YouTube'da yayınından dolayı" gözaltına alındığını söyledi. Buna göre Gültekin, "halkı yanıltıcı bilgiyi alenen yaymak" ile suçlanıyor.
                                             </span></span>
                                         </p>
+                                         <button class="read-more-btn">Devamını oku</button>
                                       </div>
                                   </div>
                                 </li>
-                                              <div id="masthead">
+                                              <div id="masthead" style="display: none;">
                                                 <div style="margin: 40px 0">
                                                   <p style="font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 10px; letter-spacing: 0.5px; color: #000; opacity: 0.4;">REKLAM</p>
                                                   <div id="div-gpt-ad-1758284542630-0"
@@ -516,24 +598,7 @@
                                                   </div>
                                                 </div>
                                               </div>
-                                            <li>
-       <div class="article-box-item">
-                                  <img src="https://static.bundle.app/ad-assets/mailing-20250117/maker1.png"
-                                    alt="li_marker" height="12" style="margin-top: 6px" />
-                                  <div>
-                                       
-                                        <p class="text-primary">
-                                          Fizikçiler evrenin sonunu hesapladı
-                                        </p>
-                                         
-                                        <p class="text-secondary" style="line-height: 160%; margin-top: 14px;">
-                                          <span style="width: 100%"><span
-                                              style="color: black; font-size: 17px; font-family: Helvetica; font-weight: 400; line-height: 27.20px;  word-wrap: break-word">Yeni bir kozmolojik modele göre evren, sonsuza kadar genişlemeyecek; yaklaşık 20 milyar yıl içinde “Büyük Çöküş” (Big Crunch) süreciyle kendi üzerine çökecek. İspanya, Çin ve ABD’den fizikçilerin geliştirdiği modele göre evrenin toplam ömrü 33,3 milyar yıl. Araştırma, karanlık enerjinin zamanla zayıflayarak genişlemeyi durdurabileceğini öne sürüyor.
-                                            </span></span>
-                                        </p>
-                                      </div>
-                                  </div>
-                                </li>
+                                            
                               </ul>
                             
               </div>
@@ -551,14 +616,14 @@
                                                 <tr>
                                                     <td>
                                                         <p class="text-secondary"
-                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: Helvetica; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
-                                                            Trump'ın İsrail ziyareti onaylandı
+                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
+                                                            Bakan Şimşek: Ekonomi programında üçüncü evredeyiz
                                                         </p>
                                                         <p class="mt-3"
                                                             style="line-height: 160%;">
                                                             <span style="width: 100%">
                                                             <span
-                                                                                          style="color: #282828; font-size: 17px; font-family: Helvetica; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">ABD Başkanı Trump, İsrail'e ziyarette bulunacak. Ziyaret, Gazze'deki gelişmeler nedeniyle "tarihi" olarak nitelendirildi. Kudüs'te sıkı güvenlik önlemleri alınacak. Trump'ın ziyareti, İsrail-Filistin gerilimi konusundaki hassas bir zamana denk geliyor.</span>
+                                                                                          style="color: #282828; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">Ekonomi programının üçüncü aşamasına geçildiğini belirten Hazine ve Maliye Bakanı Şimşek, enflasyonun iki yılda tek haneye düşeceğini ve bütçe açığının GSYH içinde kalıcı olarak %3'ün altına indirileceğini açıkladı.</span>
                                                             </span>
                                                         </p>
                                                         <br />
@@ -568,14 +633,14 @@
                                                 <tr>
                                                     <td>
                                                         <p class="text-secondary"
-                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: Helvetica; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
-                                                            Sırbistan Cumhurbaşkanı Türkiye'yi övdü
+                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
+                                                            İspanya 4 milyar avroluk helikopter alımı yaptı
                                                         </p>
                                                         <p class="mt-3"
                                                             style="line-height: 160%;">
                                                             <span style="width: 100%">
                                                             <span
-                                                                                          style="color: #282828; font-size: 17px; font-family: Helvetica; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">Sırbistan Cumhurbaşkanı Aleksandar Vucic, Türkiye'yi tehdit edemeyeceklerini belirterek, Cumhurbaşkanı Erdoğan'a övgüde bulundu. Türkiye'nin Kosova'ya sağladığı kamikaze drone'lar, iki ülke arasında gerilime neden olmuştu.</span>
+                                                                                          style="color: #282828; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">İspanya, savunma ve güvenlik kaynaklarının modernizasyonu kapsamında tarihinin en büyük helikopter alımını gerçekleştirdi. 2027-2031 yıllarında teslim edilecek helikopterler için 4 milyar avroluk sözleşme imzalandı.</span>
                                                             </span>
                                                         </p>
                                                         <br />
@@ -585,14 +650,14 @@
                                                 <tr>
                                                     <td>
                                                         <p class="text-secondary"
-                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: Helvetica; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
-                                                            Üniversitelerde üç yılda mezuniyet
+                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
+                                                            Elektrikte yeni destek, %93,5 indirimi etkilemeyecek
                                                         </p>
                                                         <p class="mt-3"
                                                             style="line-height: 160%;">
                                                             <span style="width: 100%">
                                                             <span
-                                                                                          style="color: #282828; font-size: 17px; font-family: Helvetica; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">Cumhurbaşkanı Erdoğan, lisans programlarındaki bazı öğrencilerin üç yılda mezun olmasına imkan tanıyacak yapısal reformlar yapılacağını açıkladı. Bu değişiklikle yükseköğretim sisteminin verimliliği artırılacak.</span>
+                                                                                          style="color: #282828; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">Enerji ve Tabii Kaynaklar Bakanı Bayraktar, mesken abonelerine yönelik elektrik desteğinin 4000 kWh olarak güncellenmesiyle abonelerin %93,5'inin etkilenmeyeceğini, yeni elektrikte uygulanacak düzenlemeleri anlattı.</span>
                                                             </span>
                                                         </p>
                                                         <br />
@@ -602,14 +667,14 @@
                                                 <tr>
                                                     <td>
                                                         <p class="text-secondary"
-                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: Helvetica; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
-                                                            İstanbul Altın Rafinerisi soruşturması
+                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
+                                                            AB, Ukrayna'ya 90 milyar euro kredi verecek
                                                         </p>
                                                         <p class="mt-3"
                                                             style="line-height: 160%;">
                                                             <span style="width: 100%">
                                                             <span
-                                                                                          style="color: #282828; font-size: 17px; font-family: Helvetica; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">İstanbul Altın Rafinerisi ve bağlı şirketlere yönelik hileli yollarla devlet desteği aldıkları iddiasıyla başlatılan soruşturmada 20 kişi tutuklandı. Kamu zararına yol açma suçlamasıyla dava süreci devam ediyor.</span>
+                                                                                          style="color: #282828; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">Avrupa Birliği, Ukrayna'nın 2026-2027 yıllarına yönelik 90 milyar euro kredi almasını onayladı. Bu fon, Ukrayna'nın acil mali ihtiyaçlarını karşılamaya yardımcı olacak. Anlaşma, AB'nin Ukrayna'ya desteğini vurguluyor.</span>
                                                             </span>
                                                         </p>
                                                         <br />
@@ -619,14 +684,14 @@
                                                 <tr>
                                                     <td>
                                                         <p class="text-secondary"
-                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: Helvetica; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
-                                                            EPDK'dan yüksek tüketimli konutlara yeni tarife
+                                                            style="line-height: 160%; width: 100%; color: black; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 700; line-height: 27.20px; letter-spacing: 0.17px; word-wrap: break-word;">
+                                                            RTÜK'ten dijital platformlara para cezası
                                                         </p>
                                                         <p class="mt-3"
                                                             style="line-height: 160%;">
                                                             <span style="width: 100%">
                                                             <span
-                                                                                          style="color: #282828; font-size: 17px; font-family: Helvetica; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">EPDK, 2026'dan itibaren yıllık 3 bin kWh üzerinde elektrik tüketen konutların tarifesini değiştirecek. Sabit tarifeden değişken tarifeye geçiş, yüksek elektrik faturalarına neden olabilir.</span>
+                                                                                          style="color: #282828; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 27.20px;  letter-spacing: 0.17px; word-wrap: break-word">RTÜK, HBO Max ve Netflix gibi dijital platformlara 'genel ahlaka aykırı' içerikleri nedeniyle para cezası verdi. Karar, RTÜK’ün milli ve manevi değerlere uygun yayın politikasını sürdürdüğünü gösteriyor.</span>
                                                             </span>
                                                         </p>
                                                         
@@ -653,14 +718,14 @@
                               height="9" /></div>
                             <p class="text-tertiary">
                               <span style="width: 100%"><span
-                                  style="color: black; font-size: 15px; font-family: Helvetica; font-weight: 400;  line-height: 21.30px; word-wrap: break-word">Türkiye Cumhuriyet Merkez Bankası (TCMB), 2. çeyreğe ilişkin finansal hesapları açıklayacak.</span></span>
+                                  style="color: black; font-size: 15px; font-family: 'Inter', sans-serif; font-weight: 400;  line-height: 21.30px; word-wrap: break-word">Techno efsanesi Adam Beyer, Junior ve Weska eşliğinde bu akşam 21.00’de Klein Phönix İstanbul’da sahne alarak yılın son büyük elektronik buluşmasına imza atıyor; gece, sınırlı sayıdaki kapı biletiyle ritmin nabzını yükseltmeye hazırlanıyor.</span></span>
                             </p>
                           </li><li style="margin-left: 0px;"><div style="height: 21.30px; min-width: 4px">
                             <img src="https://static.bundle.app/ad-assets/mailing-20250117/marker2.png" alt="li_marker"
                               height="9" /></div>
                             <p class="text-tertiary">
                               <span style="width: 100%"><span
-                                  style="color: black; font-size: 15px; font-family: Helvetica; font-weight: 400;  line-height: 21.30px; word-wrap: break-word">A Milli Futbol Takımı, 2026 Dünya Kupası Avrupa Elemeleri E Grubu'nda Bulgaristan'a konuk olacağı müsabakanın hazırlıklarını TFF Hasan Doğan Milli Takımlar Kamp ve Eğitim Tesisleri'nde ilk bölümü basına açık antrenmanla tamamlayacak, ardından İstanbul Havalimanı'ndan Sofya'ya hareket edecek.</span></span>
+                                  style="color: black; font-size: 15px; font-family: 'Inter', sans-serif; font-weight: 400;  line-height: 21.30px; word-wrap: break-word">Trendyol Süper Lig'de 17. haftanın açılış maçında Kocaelispor, Antalyaspor'u konuk edecek.</span></span>
                             </p>
                           </li>
                         </ul>
@@ -671,7 +736,7 @@
               </tr>
             </table>
           </div>
-           <div class="advertorial">
+          <a id="advertorialBox" href="https://youtu.be/7ALszhRdv4s" target="_blank" style="display: none;"> <div class="advertorial">
                     <table role="presentation" cellpadding="0" cellspacing="0">
                         <tr class="container" style="display: flex;">
                             <td style="padding: 0 26px; width: 100%;">
@@ -680,17 +745,17 @@
                                         <tr>
                                             <td align="left"
                                                 style="width: 50%; display: flex; flex-direction: row; column-gap: 2px; align-items: center;">
-                                                <img src="https://static.bundle.app/email-newsletter/bafkreicmnihq7suzqocx4gjkce4ld3cvjh7lphwwpb6ntwkmoumjrllqvm"
+                                                <img src="https://static.bundle.app/email-newsletter/bafkreia7hpsvfti46gcouzhob262sywxzyhqplnn4imnv2nbp724kiznqq"
                                                     alt="advertorial-source-image"
                                                     style="max-height: 24px; max-width: 100px; width: auto; object-fit: cover;">
                                                 <span style=" color: black; font-size: 11.11px;
-                                                                font-family: Helvetica; font-weight: 400; word-wrap:
+                                                                font-family: 'Inter', sans-serif; font-weight: 400; word-wrap:
                                                                 break-word; white-space: nowrap;"></span>
 
                                             </td>
                                             <td align=" right" style="width: 50%;">
                                                 <span style="color: #6B7782;font-size: 11.11px;
-                                                                font-family: Helvetica; font-weight: 400; word-wrap:
+                                                                font-family: 'Inter', sans-serif; font-weight: 400; word-wrap:
                                                                 break-word;">Sponsorlu</span>
                                             </td>
                                         </tr>
@@ -700,22 +765,22 @@
                                     <tr>
                                         <td>
                                             <p style="color: black;font-size: 24px;
-                                                                    font-family: Helvetica; font-weight: 700; word-wrap:
+                                                                    font-family: 'Inter', sans-serif; font-weight: 700; word-wrap:
                                                                     break-word; line-height: 120%;">
-                                                İşte Günün Tarifi: PRATİK SUSHİ
+                                                Tarek ve Christina: Büyük Kapışma
                                             </p>
                                             <table cellpadding="0" cellspacing="0" style="margin-top: 27px;">
                                                 <tbody>
                                                     <tr>
                                                         <td align=" left" style="width: 60%; vertical-align: top;">
                                                             <p style="color: black;font-size: 14px;
-                                                                font-family: Helvetica; font-weight: 400; word-wrap:
+                                                                font-family: 'Inter', sans-serif; font-weight: 400; word-wrap:
                                                                 break-word; line-height: 160%;">
-                                                               Bazen arkadaşlarınla veya kendi başına evde sushi partisi yapmak istersin ama o tarifi bulamazsın. Seni hem lezzetiyle hem de aşırı pratik yapımıyla uzak doğuya götürecek o tarif.
+                                                               Yılın en çekişmeli yarışmasında Rüya Gibi Evler’in yıldızı Tarek, eski eşi Christina’ya karşı yeni eşi Heather’la ekip oluyor! Kazanan kim oldu?
                                                             </p>
                                                         </td>
                                                         <td align="right" style="width: 40%; vertical-align: top;">
-                                                            <img class="advertorial-content-image" src="https://static.bundle.app/email-newsletter/bafkreibapiu2hk7hsil5txefuc3nylgi2lq2lkxltx4var5dab5f6wjdqi"
+                                                            <img class="advertorial-content-image" src="https://static.bundle.app/email-newsletter/bafkreih2h4z5m3jm72kgkzrf7ykkx4mwg5rjwsvk6jd6miic4txkgnozpq"
                                                                 style="
                                                   max-width:200px;
                                                   max-height: 150px;
@@ -738,20 +803,20 @@
                     <table role="presentation" cellpadding="0" cellspacing="0">
                         <tr class="container">
                             <td style="padding: 0 26px">
-                                <a href=" https://www.instagram.com/reel/DDZkAkCKlS9/?igsh=NDE4bGRsMzFoajB5" target="_blank"
+                                <div 
                                     style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
-                                    <span style=" color: #ffffff; font-size: 12.97px;
-                                                                font-family: Helvetica; font-weight: 700; word-wrap:
-                                                                break-word; ">Tarif için Tıkla</span>
+                                    <span style=" color: #000000; font-size: 12.97px;
+                                                                font-family: 'Inter', sans-serif; font-weight: 700; word-wrap:
+                                                                break-word; ">Hemen İzle!</span>
                                    <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 8px;">
-<path d="M7.73713 3.73225C7.91799 3.5514 7.91799 3.25817 7.73713 3.07732L4.78996 0.130143C4.6091 -0.0507105 4.31588 -0.0507105 4.13503 0.130143C3.95417 0.310996 3.95417 0.604218 4.13503 0.785071L6.75474 3.40479L4.13503 6.0245C3.95417 6.20535 3.95417 6.49857 4.13503 6.67943C4.31588 6.86028 4.6091 6.86028 4.78996 6.67943L7.73713 3.73225ZM0 3.40479V3.86789H7.40967V3.40479V2.94168H0V3.40479Z" fill="#ffffff"/>
+<path d="M7.73713 3.73225C7.91799 3.5514 7.91799 3.25817 7.73713 3.07732L4.78996 0.130143C4.6091 -0.0507105 4.31588 -0.0507105 4.13503 0.130143C3.95417 0.310996 3.95417 0.604218 4.13503 0.785071L6.75474 3.40479L4.13503 6.0245C3.95417 6.20535 3.95417 6.49857 4.13503 6.67943C4.31588 6.86028 4.6091 6.86028 4.78996 6.67943L7.73713 3.73225ZM0 3.40479V3.86789H7.40967V3.40479V2.94168H0V3.40479Z" fill="#000000"/>
 </svg>
 
-                                </a>
+                                </div>
                             </td>
                         </tr>
                     </table>
-                </div>
+                </div> </a>
           <div class="global_new" style="background-color: #eff0f1">
             <table role="presentation" cellpadding="0" cellspacing="0">
                 <tr class="container">
@@ -762,14 +827,14 @@
                         <span style="
                               color: black;
                               font-size: 24px;
-                              font-family: Helvetica;
+                              font-family: 'Inter', sans-serif;
                               font-weight: 700;
                               word-wrap: break-word;
                             ">Bundle</span>
                         <span style="
                               color: black;
                               font-size: 24px;
-                              font-family: Helvetica;
+                              font-family: 'Inter', sans-serif;
                               font-weight: 400;
                               word-wrap: break-word;
                             ">Global</span>
@@ -783,7 +848,7 @@
                               border-collapse: separate;
                               border-spacing: 0;
                               overflow: hidden;
-                              border-radius: 20px;
+                              border-radius: 32px;
                               width: 100%;
                             ">
                           <tbody style="background-color: white">
@@ -795,7 +860,7 @@
                                       <table cellpadding="0" cellspacing="0">
                                         <tr>
                                           <td style="vertical-align:middle;">
-                                            <img src=https://static.bundle.app/email-newsletter/bafkreic7lymsqek3q6q5zrbcnx6vlmwblqtquye52cv7dutcgahxec4tmq class="news_image_details" style="
+                                            <img src=https://static.bundle.app/news/pc-76b6d9657f38b7da724ded6bc0e30ef1.png class="news_image_details" style="
                                                   width: 100%;
                                                   object-fit: cover;
                                                   border-radius: 16px;
@@ -810,7 +875,7 @@
                                       <table cellpadding="0" cellspacing="0" style="margin-top: 20px;">
                                         <tr>
                                           <td style="vertical-align:middle;padding-top:5px;width: 20px; display: inline-block;">
-                                            <img src=https://static.bundle.app/email-newsletter/bafkreib3qwbowvsgjh5gtce5g5c3264wzhtaht6skwosv5iokuibfhkxgm style="
+                                            <img src=https://static.bundle.app/newschannelicons/825.jpg style="
                                                   width: 20px;
                                                   height: 20px;
                                                   object-fit: cover;
@@ -822,11 +887,11 @@
                                             <span style="
                                                   color: black;
                                                   font-size: 9px;
-                                                  font-family: Helvetica;
+                                                  font-family: 'Inter', sans-serif;
                                                   font-weight: 400;
                                                   word-wrap: break-word;
                                                   padding: 0 6px;
-                                                ">Euronews
+                                                ">FOCUS Online
                                             </span>
                                           </td>
                                           <td style="vertical-align: middle; width: 1px; display: inline-block; width: auto;">
@@ -836,7 +901,7 @@
                                             <span style="
                                                   color: black;
                                                   font-size: 9px;
-                                                  font-family: Helvetica;
+                                                  font-family: 'Inter', sans-serif;
                                                   font-weight: 400;
                                                   word-wrap: break-word;
                                                   padding-left: 6px;
@@ -860,11 +925,11 @@
                                                   width: 100%;
                                                   color: black;
                                                   font-size: 20px;
-                                                  font-family: Helvetica;
+                                                  font-family: 'Inter', sans-serif;
                                                   font-weight: 700;
                                                   line-height: 130%;
                                                   word-wrap: break-word;
-                                                ">Avusturya, İsrail men edilirse Eurovision 2026'yı düzenlemeyecek</span>
+                                                ">Londra'da ev alamayan çift komşu bahçesine kendi evini kurdu</span>
                                           </td>
                                         </tr>
                                       </table>
@@ -880,11 +945,11 @@
                                                   width: 100%;
                                                   color: black;
                                                   font-size: 15px;
-                                                  font-family: Helvetica;
+                                                  font-family: 'Inter', sans-serif;
                                                   font-weight: 400;
                                                   line-height: 150%;
                                                   word-wrap: break-word;
-                                                ">Avusturya, İsrail'in yarışmadan men edilmesi halinde 2026 Eurovision Şarkı Yarışması'na ev sahipliği yapmayacağını açıkladı. Bu önemli karar, ülkenin önde gelen yetkilileri tarafından kamuoyuna duyuruldu. Avrupa Yayın Birliği (EBU), İsrail'in katılım durumunu Kasım ayında oylayacak. Avusturya'nın ev sahipliğinden vazgeçmesi durumunda, ulusal yayıncısının 40 milyon Euro'ya kadar para cezası ödeyebileceği belirtiliyor.</span>
+                                                ">Londra’nın güneydoğusundaki Catford’da yaşayan Will ve Sogand Howard çifti, mahallelerinden ayrılmadan daha büyük bir eve geçmek istedi. Bölgedeki evler çok pahalı olduğu için komşularının bahçesinde yeni bir ev inşa ettiler. Uzun bahçeler ve küçük parsellerde yapılaşmayı teşvik eden planlama kuralları sayesinde izin alan çift, işçiliği kendileri üstlenerek yeni evlerini tamamladılar. Artan konut maliyetleri ile ilgili global bir sorunu da gündeme taşıdılar.</span>
                                           </td>
                                         </tr>
                                       </table>
@@ -928,7 +993,7 @@
                                   alt="li_marker" height="18" />
                                 <p style="line-height: 160%; color: #fff">
                                   <span style="width: 100%"><span
-                                      style="color: #F4F5F6; font-size: 17px; font-family: Helvetica; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">Morgan Stanley, yüksek gelen Eylül enflasyonu sonrası Türkiye için yıl sonu enflasyon tahminini %31,5’e, politika faizi tahminini %37,5’e yükselterek faiz indirimlerinin daha yavaş gerçekleşmesini beklediğini açıkladı.</span></span>
+                                      style="color: #F4F5F6; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">Sermaye Piyasası Kurulu (SPK), Arf Bio Yenilenebilir Enerji Üretim AŞ'nin 19,5 liradan halka arzını onayladı ve beş şirketin farklı tutarlarda sermaye artırımı başvurularına onay verdi.</span></span>
                                 </p>
                               </li> <li class="item">
                                 <img
@@ -936,7 +1001,15 @@
                                   alt="li_marker" height="18" />
                                 <p style="line-height: 160%; color: #fff">
                                   <span style="width: 100%"><span
-                                      style="color: #F4F5F6; font-size: 17px; font-family: Helvetica; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">SPK, Shell & Turcas, Ak Finansal Kiralama, Halk GYO ve Anadolubank’ın da aralarında bulunduğu 10 şirketin toplam milyarlarca liralık borçlanma aracı ihracına onay verdi; ayrıca iki kira sertifikası ihracı ve yeni emeklilik fonu kuruluşlarını da kabul etti.</span></span>
+                                      style="color: #F4F5F6; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">İlaç fiyatlarının belirlenmesinde kullanılan euro kuru yaklaşık yüzde 17 artırılarak 2026 yılı için 25,3346 TL olarak güncellendi; barem değerlerinde de düzenleme yapıldı.</span></span>
+                                </p>
+                              </li> <li class="item">
+                                <img
+                                  src="https://static.bundle.app/bundleai/studio/chat/thumbnail/87g15gx9od8lqe38a3y/bafkreidwhiy2acomziz7v6ewi724umn64rhmifnssnxfyvkszswsqq6dga"
+                                  alt="li_marker" height="18" />
+                                <p style="line-height: 160%; color: #fff">
+                                  <span style="width: 100%"><span
+                                      style="color: #F4F5F6; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">Resmi Gazete'de yayımlanan kararla, Pan-Avrupa-Akdeniz Tercihli Menşe Kurallarına Dair Bölgesel Konvansiyonun çeşitli ek kararları 1 Ocak 2025 tarihinden itibaren yürürlüğe alındı.</span></span>
                                 </p>
                               </li>
                             </ul>
@@ -956,7 +1029,7 @@
                                   alt="li_marker" height="18" />
                                 <p style="line-height: 160%; color: #fff">
                                   <span style="width: 100%"><span
-                                      style="color: #F4F5F6; font-size: 17px; font-family: Helvetica; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">Petrol fiyatları, Orta Doğu'daki gerilimin azalabileceği beklentileri ve OPEC+ üretim kotalarında artış olmasına rağmen arz fazlası nedeniyle haftanın en büyük düşüşünü korudu.</span></span>
+                                      style="color: #F4F5F6; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">Japonya Merkez Bankası (BOJ), kısa vadeli faiz oranını yüzde 0,50'den yüzde 0,75'e yükselterek 30 yıl sonra ilk defa bu seviyeye çıkardı.</span></span>
                                 </p>
                               </li> <li class="item">
                                 <img
@@ -964,7 +1037,7 @@
                                   alt="li_marker" height="18" />
                                 <p style="line-height: 160%; color: #fff">
                                   <span style="width: 100%"><span
-                                      style="color: #F4F5F6; font-size: 17px; font-family: Helvetica; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">Danimarkalı Orsted, küresel tedarik zinciri sorunları ve ABD'deki aksaklıklar nedeniyle 2027 sonuna kadar 2 bin kişiyi işten çıkaracak ve yıllık yaklaşık 270 milyon avro maliyet tasarrufu hedefleyecek.</span></span>
+                                      style="color: #F4F5F6; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400;  line-height: 25.50px; word-wrap: break-word">TikTok, ABD'deki operasyonlarını Amerikalı yatırımcıların kontrolündeki bir girişime devretmek için Oracle, Silver Lake ve MGX ile bağlayıcı anlaşma imzaladı.</span></span>
                                 </p>
                               </li>
                             </ul>
@@ -1001,7 +1074,7 @@
                     <span style="
                           color: #f4f5f6;
                           font-size: 14px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 400;
                           word-wrap: break-word;
                         ">DOLAR</span>
@@ -1018,7 +1091,7 @@
                   </td>
                   <td style="width: 20%" align="left">
                     <span
-                      style="color: #34c85a; font-size: 12px; font-family: Helvetica; font-weight: 400; word-wrap: break-word">%0.23</span>
+                      style="color: #34c85a; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">%0.18</span>
                   </td>
                   <td align="right" style="width: 80%">
                     <span style="
@@ -1026,11 +1099,11 @@
                           text-align: right;
                           color: #f4f5f6;
                           font-size: 20px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 700;
                           text-transform: uppercase;
                           word-wrap: break-word;
-                        ">41.81</span>
+                        ">42.80</span>
                   </td>
                 </tr><tr class="note_container" style="width: 100%">
                   <td style="width: 6%; vertical-align: middle">
@@ -1047,7 +1120,7 @@
                     <span style="
                           color: #f4f5f6;
                           font-size: 14px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 400;
                           word-wrap: break-word;
                         ">EURO</span>
@@ -1064,7 +1137,7 @@
                   </td>
                   <td style="width: 20%" align="left">
                     <span
-                      style="color: #FD3B31; font-size: 12px; font-family: Helvetica; font-weight: 400; word-wrap: break-word">%0.66</span>
+                      style="color: #FD3B31; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">%0.24</span>
                   </td>
                   <td align="right" style="width: 80%">
                     <span style="
@@ -1072,11 +1145,11 @@
                           text-align: right;
                           color: #f4f5f6;
                           font-size: 20px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 700;
                           text-transform: uppercase;
                           word-wrap: break-word;
-                        ">48.40</span>
+                        ">50.16</span>
                   </td>
                 </tr><tr class="note_container" style="width: 100%">
                   <td style="width: 6%; vertical-align: middle">
@@ -1093,14 +1166,14 @@
                     <span style="
                           color: #f4f5f6;
                           font-size: 14px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 400;
                           word-wrap: break-word;
                         ">S&P 500</span>
                   </td>
                   <td style="width: 2%" align="right">
                     <img
-                      src="https://static.bundle.app/bundleai/studio/chat/thumbnail/87g15gx9od8lqe38a3y/bafkreigulkbdi43ggkhppmmk6qwnwwdk6c2hd2rvk6nj4vjyyesskkxoki"
+                      src="https://static.bundle.app/bundleai/studio/chat/thumbnail/87g15gx9od8lqe38a3y/bafkreibhfot4j5uwdxb45e3jfxcdar26l4ipplvhyp2jbf24aeji7uaari"
                       style="
                         width: 8px;
                         height: auto;
@@ -1110,7 +1183,7 @@
                   </td>
                   <td style="width: 20%" align="left">
                     <span
-                      style="color: #FD3B31; font-size: 12px; font-family: Helvetica; font-weight: 400; word-wrap: break-word">%0.28</span>
+                      style="color: #34c85a; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">%0.78</span>
                   </td>
                   <td align="right" style="width: 80%">
                     <span style="
@@ -1118,11 +1191,11 @@
                           text-align: right;
                           color: #f4f5f6;
                           font-size: 20px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 700;
                           text-transform: uppercase;
                           word-wrap: break-word;
-                        ">6734.91</span>
+                        ">6774.35</span>
                   </td>
                 </tr><tr class="note_container" style="width: 100%">
                   <td style="width: 6%; vertical-align: middle">
@@ -1139,14 +1212,14 @@
                     <span style="
                           color: #f4f5f6;
                           font-size: 14px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 400;
                           word-wrap: break-word;
                         ">BIST100</span>
                   </td>
                   <td style="width: 2%" align="right">
                     <img
-                      src="https://static.bundle.app/bundleai/studio/chat/thumbnail/87g15gx9od8lqe38a3y/bafkreigulkbdi43ggkhppmmk6qwnwwdk6c2hd2rvk6nj4vjyyesskkxoki"
+                      src="https://static.bundle.app/bundleai/studio/chat/thumbnail/87g15gx9od8lqe38a3y/bafkreibhfot4j5uwdxb45e3jfxcdar26l4ipplvhyp2jbf24aeji7uaari"
                       style="
                         width: 8px;
                         height: auto;
@@ -1156,7 +1229,7 @@
                   </td>
                   <td style="width: 20%" align="left">
                     <span
-                      style="color: #FD3B31; font-size: 12px; font-family: Helvetica; font-weight: 400; word-wrap: break-word">%0.31</span>
+                      style="color: #34c85a; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">%0.40</span>
                   </td>
                   <td align="right" style="width: 80%">
                     <span style="
@@ -1164,11 +1237,11 @@
                           text-align: right;
                           color: #f4f5f6;
                           font-size: 20px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 700;
                           text-transform: uppercase;
                           word-wrap: break-word;
-                        ">10726.27</span>
+                        ">11338.89</span>
                   </td>
                 </tr><tr class="note_container" style="width: 100%">
                   <td style="width: 6%; vertical-align: middle">
@@ -1185,7 +1258,7 @@
                     <span style="
                           color: #f4f5f6;
                           font-size: 14px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 400;
                           word-wrap: break-word;
                         ">ALTIN (gr.)</span>
@@ -1202,7 +1275,7 @@
                   </td>
                   <td style="width: 20%" align="left">
                     <span
-                      style="color: #FD3B31; font-size: 12px; font-family: Helvetica; font-weight: 400; word-wrap: break-word">%1.60</span>
+                      style="color: #FD3B31; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">%0.14</span>
                   </td>
                   <td align="right" style="width: 80%">
                     <span style="
@@ -1210,11 +1283,11 @@
                           text-align: right;
                           color: #f4f5f6;
                           font-size: 20px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 700;
                           text-transform: uppercase;
                           word-wrap: break-word;
-                        ">5354.97</span>
+                        ">5983.75</span>
                   </td>
                 </tr><tr class="note_container" style="width: 100%">
                   <td style="width: 6%; vertical-align: middle">
@@ -1231,14 +1304,14 @@
                     <span style="
                           color: #f4f5f6;
                           font-size: 14px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 400;
                           word-wrap: break-word;
                         ">BITCOIN</span>
                   </td>
                   <td style="width: 2%" align="right">
                     <img
-                      src="https://static.bundle.app/bundleai/studio/chat/thumbnail/87g15gx9od8lqe38a3y/bafkreigulkbdi43ggkhppmmk6qwnwwdk6c2hd2rvk6nj4vjyyesskkxoki"
+                      src="https://static.bundle.app/bundleai/studio/chat/thumbnail/87g15gx9od8lqe38a3y/bafkreibhfot4j5uwdxb45e3jfxcdar26l4ipplvhyp2jbf24aeji7uaari"
                       style="
                         width: 8px;
                         height: auto;
@@ -1248,7 +1321,7 @@
                   </td>
                   <td style="width: 20%" align="left">
                     <span
-                      style="color: #FD3B31; font-size: 12px; font-family: Helvetica; font-weight: 400; word-wrap: break-word">%0.76</span>
+                      style="color: #34c85a; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">%0.08</span>
                   </td>
                   <td align="right" style="width: 80%">
                     <span style="
@@ -1256,11 +1329,11 @@
                           text-align: right;
                           color: #f4f5f6;
                           font-size: 20px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 700;
                           text-transform: uppercase;
                           word-wrap: break-word;
-                        ">$121210.79</span>
+                        ">$86804.66</span>
                   </td>
                 </tr>
               </table>
@@ -1270,10 +1343,10 @@
                     <span style="
                           color: #39444f;
                           font-size: 11.33px;
-                          font-family: Helvetica;
+                          font-family: 'Inter', sans-serif;
                           font-weight: 400;
                           word-wrap: break-word;
-                        ">TSİ 10.10.2025 - 08:22 güncellenmiştir.</span>
+                        ">TSİ 19.12.2025 - 08:22 güncellenmiştir.</span>
                   </td>
                 </tr>
               </table>
@@ -1283,49 +1356,267 @@
       </tr>
     </table>
     
-        <script>
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.__gptInit) return; // tekrar eklenmesini önle
-  window.__gptInit = true;
+<script>
+        (function () {
+            let currentPremium = null; 
+            let adsInitialized = false;
 
-  window.googletag = window.googletag || { cmd: [] };
+            function applyPremium(premium) {
+              if (premium === currentPremium) return;
+              currentPremium = premium;
 
-  googletag.cmd.push(function () {
-    const mastheadId = "div-gpt-ad-1758284542630-0";
+              if (premium) {
+                removeMasthead();
+                hidePremiumBlockedElements();
+              } else {
+                showPremiumBlockedElements();
+                showMasthead();
+                if (!adsInitialized) {
+                  adsInitialized = true;
+                  startAds();
+                }
+              }
+            }
 
-    googletag.defineSlot("/21766134743/standardbanner_morning_1", [300, 250], mastheadId)
-             .addService(googletag.pubads());
+            function startAds() {
+              loadScript("https://securepubads.g.doubleclick.net/tag/js/gpt.js", initGPT);
+            }
 
-   
+            function removeMasthead() {
+              var m = document.getElementById("masthead");
+              if (m) m.remove();
+            }
 
-   
-    googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-      const slotId = event.slot.getSlotElementId();
-      if (!event.isEmpty) {
-        console.log("Reklam başarıyla yüklendi:", slotId);
-      } else {
-        console.log("Reklam boş geldi:", slotId);
-        if (slotId === mastheadId) {
-          const masthead = document.getElementById("masthead");
-          if (masthead) masthead.style.display = "none";
-        } 
-      }
-    });
+            function showMasthead() {
+              var m = document.getElementById("masthead");
+              if (m) m.style.display = "block";
+            }
 
-    googletag.enableServices();
+            function hidePremiumBlockedElements() {
+              const ids = ["sponsorHeader", "advertorialBox"];
+              ids.forEach((id) => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = "none";
+              });
+            }
 
-    googletag.display(mastheadId);
-  });
+            function showPremiumBlockedElements() {
+              const ids = ["sponsorHeader", "advertorialBox"];
+              const sponsorHeaderEl = document.getElementById("sponsorHeader");
+              if (sponsorHeaderEl) {
+                sponsorHeaderEl.style.display = "flex";
+              }
+              const advertorialBoxEl = document.getElementById("advertorialBox");
+              if (advertorialBoxEl) {
+                advertorialBoxEl.style.display = "block";
+              }
+            }
 
-  window.addEventListener("hashchange", function () {
-    googletag.cmd.push(function () {
-      googletag.pubads().refresh();
-    });
-  });
-});
-</script>
+            function loadScript(src, onload) {
+              var s = document.createElement("script");
+              s.async = true;
+              s.src = src;
+              if (onload) s.onload = onload;
+              document.head.appendChild(s);
+            }
 
-   
+            function initGPT() {
+              window.googletag = window.googletag || { cmd: [] };
+              googletag.cmd.push(function () {
+                var mastheadId = "div-gpt-ad-1758284542630-0";
+                googletag
+                  .defineSlot(
+                    "/21766134743/standardbanner_morning_1",
+                    [300, 250],
+                    mastheadId
+                  )
+                  .addService(googletag.pubads());
+                googletag
+                  .pubads()
+                  .addEventListener("slotRenderEnded", function (event) {
+                    if (event.slot.getSlotElementId() === mastheadId) {
+                      if (event.isEmpty) removeMasthead();
+                    }
+                  });
+                googletag.enableServices();
+                googletag.display(mastheadId);
+              });
+              window.addEventListener("hashchange", function () {
+                googletag.cmd.push(function () {
+                  googletag.pubads().refresh();
+                });
+              });
+            }
+
+            function getBM() {
+              return (window.bundleMobile ?? window.BundleMobile) || null;
+            }
+
+            function normalizePremium(v) {
+              // true/"true"/1/"1" -> true; diğer her şey false
+              if (typeof v === "string") return v.trim().toLowerCase() === "true";
+              return Boolean(v);
+            }
+
+            function readPremiumOnce() {
+              try {
+                const bm = getBM();
+                if (!bm || bm.isPremium == null) return null;
+                return normalizePremium(bm.isPremium);
+              } catch {
+                return null;
+              }
+            }
+
+            setTimeout(() => {
+              const bm = getBM();
+              // henüz bir durum uygulanmadıysa ve kaynak yoksa non-premium'a geç
+              if (!bm && currentPremium === null) {
+                applyPremium(false);
+              }
+            }, 200);
+
+            try {
+              let _bm = getBM();
+
+              function attachPremiumWatcher(obj) {
+                if (!obj || typeof obj !== "object") return obj;
+
+                // isPremium alanını izlemek için defineProperty
+                try {
+                  const desc = Object.getOwnPropertyDescriptor(obj, "isPremium");
+                  let _val =
+                    desc && ("value" in desc || desc.get)
+                      ? obj.isPremium
+                      : obj.isPremium;
+
+                  Object.defineProperty(obj, "isPremium", {
+                    configurable: true,
+                    enumerable: true,
+                    get() {
+                      return _val;
+                    },
+                    set(newVal) {
+                      _val = newVal;
+                      applyPremium(normalizePremium(newVal));
+                    },
+                  });
+                } catch (_) {
+                  // obj dondurulmuş ise Proxy deneyelim
+                  obj = new Proxy(obj, {
+                    set(target, prop, value) {
+                      target[prop] = value;
+                      if (prop === "isPremium")
+                        applyPremium(normalizePremium(value));
+                      return true;
+                    },
+                  });
+                }
+                // İlk değeri uygula
+                if (obj.isPremium != null)
+                  applyPremium(normalizePremium(obj.isPremium));
+                return obj;
+              }
+
+              // window.bundleMobile alanının set edilmesini yakala
+              ["bundleMobile", "BundleMobile"].forEach((key) => {
+                if (!Object.getOwnPropertyDescriptor(window, key)?.configurable)
+                  return;
+
+                let _val = window[key];
+                Object.defineProperty(window, key, {
+                  configurable: true,
+                  enumerable: true,
+                  get() {
+                    return _val;
+                  },
+                  set(newObj) {
+                    _val = attachPremiumWatcher(newObj);
+                  },
+                });
+
+                // Halihazırda varsa watcher bağla
+                if (_val) {
+                  _val = attachPremiumWatcher(_val);
+                } else {
+                  // Yoksa ilk okuma için hafif polling ile bekleyelim (aşağıda ayrıca emniyet ağı var)
+                }
+              });
+            } catch (e) {
+              // defineProperty başarısız olursa sadece polling + postMessage ile devam edeceğiz
+            }
+
+            // --- 2) Native/WebView için mesaj dinleme ---
+            // Native taraf, { type: 'bundleMobile', isPremium: true } gibi mesaj göndersin.
+            window.addEventListener("message", function (ev) {
+              try {
+                const data =
+                  typeof ev.data === "string" ? JSON.parse(ev.data) : ev.data;
+                if (
+                  data &&
+                  (data.type === "bundleMobile" || data.type === "premiumUpdate")
+                ) {
+                  if (typeof data.isPremium !== "undefined") {
+                    applyPremium(normalizePremium(data.isPremium));
+                  }
+                }
+              } catch (_) {}
+            });
+
+            // Native’in doğrudan çağırabilmesi için global API:
+            window.setBundlePremium = function (flag) {
+              applyPremium(normalizePremium(flag));
+            };
+
+            // --- 3) Emniyet ağı: düşük frekanslı polling (1 sn) ---
+            // Objeye erişim/mesaj gelmezse bile değişiklikleri yakalar.
+            (function safePoll() {
+              let last = null;
+              setInterval(() => {
+                const now = readPremiumOnce();
+                if (now == null) return;
+                if (last !== now) {
+                  last = now;
+                  applyPremium(now);
+                }
+              }, 1000);
+            })();
+
+            // İlk durum için hızlı deneme (anlık okuma)
+            const initial = readPremiumOnce();
+            if (initial != null) applyPremium(initial);
+        })();
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .querySelectorAll(".clampable-text .read-more-btn")
+          .forEach((btn) => {
+            // erişilebilirlik
+            btn.setAttribute("role", "button");
+            btn.setAttribute("aria-expanded", "false");
+
+            btn.addEventListener("click", () => {
+              const item = btn.closest(".clampable-text");
+              const text = item?.querySelector(
+                ".clampable-text .text-secondary"
+              );
+              if (!text) return;
+
+              // sınıfı aç/kapa: true => artık kısaltılmış, false => tam metin
+              const isNowClamped = text.classList.toggle("clamp-3");
+
+              // buton metnini güncelle
+              btn.textContent = isNowClamped
+                ? "Devamını oku"
+                : "Kısa haline geç";
+              btn.setAttribute("aria-expanded", (!isNowClamped).toString());
+            });
+          });
+      });
+    </script>
+
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
